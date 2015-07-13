@@ -1,0 +1,7 @@
+
+# URL of the firmware files
+base_fw_url=http://firmware.ffmuc.net/stable/factory/
+
+# the current firmware version
+base_fw_name="gluon-ffmuc-v2015.5"
+
