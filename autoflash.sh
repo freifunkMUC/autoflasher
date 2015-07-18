@@ -15,83 +15,52 @@ function curl_admin() {
 }
 
 # download missing firmware images
-models="tp-link-tl-wr841n-nd-v8 tp-link-tl-wr841n-nd-v9"
-models="${models} tp-link-tl-wr1043n-nd-v2"
+models="${models} tp-link-cpe210-v1.0"
+models="${models} tp-link-cpe220-v1.0"
+models="${models} tp-link-cpe510-v1.0"
+models="${models} tp-link-cpe520-v1.0"
+models="${models} tp-link-tl-mr3020-v1"
+models="${models} tp-link-tl-mr3040-v1"
+models="${models} tp-link-tl-mr3040-v2"
+models="${models} tp-link-tl-mr3220-v1"
+models="${models} tp-link-tl-mr3220-v2"
+models="${models} tp-link-tl-mr3420-v1"
+models="${models} tp-link-tl-mr3420-v2"
+models="${models} tp-link-tl-wa701n-nd-v1"
+models="${models} tp-link-tl-wa750re-v1"
+models="${models} tp-link-tl-wa801n-nd-v2"
+models="${models} tp-link-tl-wa830re-v1"
+models="${models} tp-link-tl-wa850re-v1"
+models="${models} tp-link-tl-wa860re-v1"
+models="${models} tp-link-tl-wa901n-nd-v2"
+models="${models} tp-link-tl-wa901n-nd-v3"
 models="${models} tp-link-tl-wdr3500-v1"
 models="${models} tp-link-tl-wdr3600-v1"
 models="${models} tp-link-tl-wdr4300-v1"
-
-
-#models="buffalo-wzr-hp-ag300h-wzr-600dhp.bin"
-#models="${models} buffalo-wzr-hp-g450h.bin"
-#models="${models} d-link-dir-615-rev-c1.bin"
-#models="${models} d-link-dir-825-rev-b1.bin"
-#models="${models} gl-inet-6408a-v1.bin"
-#models="${models} gl-inet-6416a-v1.bin"
-#models="${models} linksys-wrt160nl.bin"
-#models="${models} netgear-wndr3700.img"
-#models="${models} netgear-wndr3700v2.img"
-#models="${models} netgear-wndr3700v4.img"
-#models="${models} netgear-wndr3800.img"
-#models="${models} netgear-wndr4300.img"
-#models="${models} netgear-wndrmacv2.img"
-#models="${models} tp-link-cpe210-v1.0.bin"
-#models="${models} tp-link-cpe220-v1.0.bin"
-#models="${models} tp-link-cpe510-v1.0.bin"
-#models="${models} tp-link-cpe520-v1.0.bin"
-#models="${models} tp-link-tl-mr3020-v1.bin"
-#models="${models} tp-link-tl-mr3040-v1.bin"
-#models="${models} tp-link-tl-mr3040-v2.bin"
-#models="${models} tp-link-tl-mr3220-v1.bin"
-#models="${models} tp-link-tl-mr3220-v2.bin"
-#models="${models} tp-link-tl-mr3420-v1.bin"
-#models="${models} tp-link-tl-mr3420-v2.bin"
-#models="${models} tp-link-tl-wa701n-nd-v1.bin"
-#models="${models} tp-link-tl-wa750re-v1.bin"
-#models="${models} tp-link-tl-wa801n-nd-v2.bin"
-#models="${models} tp-link-tl-wa830re-v1.bin"
-#models="${models} tp-link-tl-wa850re-v1.bin"
-#models="${models} tp-link-tl-wa860re-v1.bin"
-#models="${models} tp-link-tl-wa901n-nd-v2.bin"
-#models="${models} tp-link-tl-wa901n-nd-v3.bin"
-#models="${models} tp-link-tl-wdr3500-v1.bin"
-#models="${models} tp-link-tl-wdr3600-v1.bin"
-#models="${models} tp-link-tl-wdr4300-v1.bin"
-#models="${models} tp-link-tl-wr1043n-nd-v1.bin"
-#models="${models} tp-link-tl-wr1043n-nd-v2.bin"
-#models="${models} tp-link-tl-wr2543n-nd-v1.bin"
-#models="${models} tp-link-tl-wr703n-v1.bin"
-#models="${models} tp-link-tl-wr710n-v1.bin"
-#models="${models} tp-link-tl-wr740n-nd-v1.bin"
-#models="${models} tp-link-tl-wr740n-nd-v3.bin"
-#models="${models} tp-link-tl-wr740n-nd-v4.bin"
-#models="${models} tp-link-tl-wr741n-nd-v1.bin"
-#models="${models} tp-link-tl-wr741n-nd-v2.bin"
-#models="${models} tp-link-tl-wr741n-nd-v4.bin"
-#models="${models} tp-link-tl-wr743n-nd-v1.bin"
-#models="${models} tp-link-tl-wr743n-nd-v2.bin"
-#models="${models} tp-link-tl-wr841n-nd-v3.bin"
-#models="${models} tp-link-tl-wr841n-nd-v5.bin"
-#models="${models} tp-link-tl-wr841n-nd-v7.bin"
-#models="${models} tp-link-tl-wr841n-nd-v8.bin"
-#models="${models} tp-link-tl-wr841n-nd-v9.bin"
-#models="${models} tp-link-tl-wr842n-nd-v1.bin"
-#models="${models} tp-link-tl-wr842n-nd-v2.bin"
-#models="${models} tp-link-tl-wr941n-nd-v2.bin"
-#models="${models} tp-link-tl-wr941n-nd-v3.bin"
-#models="${models} tp-link-tl-wr941n-nd-v4.bin"
-#models="${models} tp-link-tl-wr941n-nd-v5.bin"
-#models="${models} ubiquiti-bullet-m.bin"
-#models="${models} ubiquiti-loco-m-xw.bin"
-#models="${models} ubiquiti-nanostation-m-xw.bin"
-#models="${models} ubiquiti-nanostation-m.bin"
-#models="${models} ubiquiti-unifi-ap-pro.bin"
-#models="${models} ubiquiti-unifi.bin"
-#models="${models} ubiquiti-unifiap-outdoor.bin"
-#models="${models} x86-generic.img.gz"
-#models="${models} x86-kvm.img.gz"
-#models="${models} x86-virtualbox.vdi"
-#models="${models} x86-vmware.vmdk"
+models="${models} tp-link-tl-wr1043n-nd-v1"
+models="${models} tp-link-tl-wr1043n-nd-v2"
+models="${models} tp-link-tl-wr2543n-nd-v1"
+models="${models} tp-link-tl-wr703n-v1"
+models="${models} tp-link-tl-wr710n-v1"
+models="${models} tp-link-tl-wr740n-nd-v1"
+models="${models} tp-link-tl-wr740n-nd-v3"
+models="${models} tp-link-tl-wr740n-nd-v4"
+models="${models} tp-link-tl-wr741n-nd-v1"
+models="${models} tp-link-tl-wr741n-nd-v2"
+models="${models} tp-link-tl-wr741n-nd-v4"
+models="${models} tp-link-tl-wr743n-nd-v1"
+models="${models} tp-link-tl-wr743n-nd-v2"
+models="${models} tp-link-tl-wr841n-nd-v3"
+models="${models} tp-link-tl-wr841n-nd-v5"
+models="${models} tp-link-tl-wr841n-nd-v7"
+models="${models} tp-link-tl-wr841n-nd-v8"
+models="${models} tp-link-tl-wr841n-nd-v9"
+models="${models} tp-link-tl-wr842n-nd-v1"
+models="${models} tp-link-tl-wr842n-nd-v2"
+models="${models} tp-link-tl-wr941n-nd-v2"
+models="${models} tp-link-tl-wr941n-nd-v3"
+models="${models} tp-link-tl-wr941n-nd-v4"
+models="${models} tp-link-tl-wr941n-nd-v5"
 
 
 for model in $models; do
@@ -150,8 +119,8 @@ fi
 image="images/$image"
 
 echo -en "flashing image: $image ... "
-curl_admin -e $hwver_page -F Filename=@$image $uploadurl > /dev/null
-curl_admin -e $uploadurl http://192.168.0.1/userRpm/FirmwareUpdateTemp.htm > /dev/null
+#curl_admin -e $hwver_page -F Filename=@$image $uploadurl > /dev/null
+#curl_admin -e $uploadurl http://192.168.0.1/userRpm/FirmwareUpdateTemp.htm > /dev/null
 echo "done :)"
 
 echo -en "waiting for router to come up again "
@@ -162,15 +131,15 @@ done
 echo " \o/"
 
 # upload authorized keys if present
-if [ -e authorized_keys ]; then
-	echo -en "uploading authorized_keys ... "
-	keys=`cat authorized_keys`
-	curl -fsS -F cbi.submit=1 -F "cbid.system._keys._data=$keys" http://192.168.1.1/cgi-bin/luci/admin/index > /dev/null
-	if [ $? -eq 0 ]; then
-		echo "OK"
-	else
-		quit 4
-	fi
-fi
+#if [ -e authorized_keys ]; then
+#	echo -en "uploading authorized_keys ... "
+#	keys=`cat authorized_keys`
+#	curl -fsS -F cbi.submit=1 -F "cbid.system._keys._data=$keys" http://192.168.1.1/cgi-bin/luci/admin/index > /dev/null
+#	if [ $? -eq 0 ]; then
+#		echo "OK"
+#	else
+#		quit 4
+#	fi
+#fi
 
 echo
